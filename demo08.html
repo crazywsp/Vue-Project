@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+    <script src="jquery-1.12.2.js"></script>
+</head>
+<body>
+<div id="app-1">
+    <p v-bind:[message]="value">p元素</p>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    var someAttr = 'class';
+    var vm = new Vue({
+        el: '#app-1',
+        data:{
+            message: 'STYLE',
+            value: 'color:RED'
+        }
+    })
+
+</script>
+</body>
+</html>

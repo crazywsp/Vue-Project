@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="app1">
+        <p>{{ html }}</p>
+    </div>
+
+    <div id="app2">
+        <p v-html="html"></p>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+
+    new Vue({
+        el: '#app1',
+        data: {
+            html: '<span style="color: red">This should be red.</span>'
+        }
+    })
+
+    new Vue({
+        el: '#app2',
+        data: {
+            html: '<span style="color: red">This should be red.</span>'
+        }
+    })
+
+</script>
+</body>
+</html>

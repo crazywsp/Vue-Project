@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <custom-input
+        v-bind:value="searchText"
+        v-on:input="searchText = $event"
+    ></custom-input>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    Vue.component('custom-input', {
+        props: ['value'],
+        template: `
+            <input
+             v-bind:value="value"
+             v-on:input="$emit('input', $event.target.value)">
+        `
+    })
+    new Vue({
+        el: '#app-1',
+        data: {
+            value: 1
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <p v-if="seen">now you see me.</p>
+    <a v-bind:href="url">这是一个项目下的链接</a>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app-1',
+        data: {
+            seen: true,
+            url: 'www.baidu.com'
+        }
+    })
+
+</script>
+</body>
+</html>

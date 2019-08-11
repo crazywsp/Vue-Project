@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <blog-post
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:title="post.title"
+    ></blog-post>
+    <!--<blog-post title="My journey with Vue111"></blog-post>
+    <blog-post title="My journey with Vue222"></blog-post>-->
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    Vue.component('blog-post', {
+        props: ['title','key'],
+        template: '<h3">{{ title + key }}</h3>'
+    })
+
+    /*var vm = new Vue({
+        el: '#app-1'
+    })*/
+
+
+    var vm2 = new Vue({
+        el: '#app-1',
+        data: {
+            posts:[
+                { id: 1, title: 'title000'},
+                { id: 2, title: 'title111'},
+                { id: 3, title: 'title222'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

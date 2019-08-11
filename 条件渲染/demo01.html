@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no </h1>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app-1',
+        data: {
+            // 当awesome的值为truthy(真值)时，if条件成立
+            awesome: true
+        }
+    })
+</script>
+</body>
+</html>

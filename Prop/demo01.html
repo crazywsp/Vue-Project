@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <!--<blog-post v-bind:likes="42"></blog-post>-->
+    <blog-post is-published></blog-post>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    Vue.component('blog-post', {
+        props: ['is-published'],
+        template: `
+            <h2>{{ is-published }}</h2>
+        `
+    })
+
+    new Vue({
+        el: '#app-1'
+    })
+</script>
+</body>
+</html>

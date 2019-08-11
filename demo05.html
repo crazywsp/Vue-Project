@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+    <div id="app-1">
+        <p v-bind:id="dynamicId"></p>
+    </div>
+    <div id="app-2">
+        <p>{{ message }}</p>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app-1',
+        data:{
+            dynamicId: 12
+        }
+    })
+    var vm2 = new Vue({
+        el: '#app-2',
+        data:{
+            message: "你好" + new Date().toLocaleString()
+        }
+    })
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+<div id="app-1">
+    <ul>
+        <!--<li v-for="n in items1">
+            {{ n }}
+        </li>-->
+        <li v-for="n in even(numbers)">{{ n }}</li>
+    </ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app-1',
+        data: {
+            numbers: [ 1,2,3,4,5 ]
+        },
+        methods: {
+            even: function (numbers) {
+                return numbers.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }
+       /* computed: {
+            items1: function () {
+                return this.items.filter(function (number) {
+                    return number % 2 === 0
+                })
+            }
+        }*/
+    })
+</script>
+</body>
+</html>

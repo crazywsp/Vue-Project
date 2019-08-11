@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue学习</title>
+    <script src="" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="example">
+        <p>{{ foo ? 'YES' : 'NO' }}</p>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script>
+
+    var obj = {
+        foo : null
+    }
+
+    Object.freeze(obj)
+
+    var vm = new Vue({
+        el: '#example',
+        data: obj,
+        updated: function () {
+            console.log('a is:' + this.a)
+        }
+    })
+
+</script>
+</body>
+</html>
