@@ -4,10 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>vue-project01</title>
+    <style>
+      a.router-link-active {
+        color: red;
+      }
+      li.router-link-active a{
+        color: red;
+      }
+      .fade1-enter-active, .fade-leave-active {
+        transition: opacity 0.5s
+      }
+      .fade1-enter, .fade-leave-active {
+          opacity: 0
+      }
+      .fade2-enter-active, .fade-leave-active {
+        transition: opacity 0.5s
+      }
+      .fade2-enter, .fade-leave-active {
+          opacity: 0;
+          background-color: red;
+          color: blue;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-      body
     </div>
   </body>
 </html>
