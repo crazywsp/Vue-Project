@@ -249,10 +249,9 @@
 }
 .new-item {
   display: inline-block;
-  width: 200px;
+  width: 230px;
   overflow: hidden;
   text-overflow: ellipsis;
-  //不允许换行
   white-space: nowrap;
 }
 </style>
